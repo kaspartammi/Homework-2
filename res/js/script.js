@@ -17,5 +17,28 @@ $(function(){  //kui dokument laetud hakkab tegema
 		course.childNodes[7].innerText=courses[indeks].grade;
 	});
 	// 2.punkt lõpp
+	// 3.punkt algus
+
+    $("#courses-button").click(function(){
+        $($('#courses-button')).addClass('active');
+        $("#profile-button").removeClass('active');
+        $("#courses-container").addClass('active');
+        $("#profile-container").removeClass('active');
+    });
+    $("#profile-button").click(function(){
+        $($('#profile-button')).addClass('active');
+        $("#courses-button").removeClass('active');
+        $("#profile-container").addClass('active');
+        $("#courses-container").removeClass('active');
+    });
+
+    // 3.lõpp
+    // 4.punkt algus
+
+    $("#add-course-button").click(function(){
+        $("#add-course").toggle();
+    });
+
+    // 4.punkti lõpp
 });
 
