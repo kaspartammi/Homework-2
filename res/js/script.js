@@ -37,8 +37,41 @@ $(function(){  //kui dokument laetud hakkab tegema
 
     $("#add-course-button").click(function(){
         $("#add-course").toggle();
+
+
     });
 
     // 4.punkti lõpp
+    // 5. algus
+
+
+    var counter = 4;
+    $("#save-course").click(function(){
+        counter +=1;
+
+        var a = $("#title").val();
+        var b = $("#semester").val();
+        var c = $("#grade").val();
+        $('#courses').append('<tr><td>'+counter+'</td><td>'+a+'</td><td>'+b+'</td><td>'+c+'</td></tr>');
+
+        $("#title").val('');
+        $("#semester").val('');
+        $("#grade").val('');
+        $("#add-course").toggle();
+
+
+    });
+
+    //6. algus
+    $("#cancel-course").click(function(){
+        var a = $("#title").val('');
+        var b = $("#semester").val('');
+        var c = $("#grade").val('');
+
+        $("#add-course").toggle();
+    });
+    //6. lõpp
+
+
 });
 
